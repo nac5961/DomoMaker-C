@@ -6,12 +6,12 @@ const Account = models.Account;
 
 // Function to display the login page
 const loginPage = (req, res) => {
-  res.render('login');
+  res.render('login', { csrfToken: req.csrfToken() });
 };
 
 // Function to display the signup page
 const signupPage = (req, res) => {
-  res.render('signup');
+  res.render('signup', { csrfToken: req.csrfToken() });
 };
 
 // Function to display the home page when a user logs out
